@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
 size = Vector2(114, 115)
 
-[node name="Player" type="CharacterBody2D" unique_id=2006581163]
+[node name="Player" type="CharacterBody2D" unique_id=2006581163 groups=["Player"]]
 scale = Vector2(0.6399997, 0.6399997)
 script = ExtResource("1_cvnsp")
 
