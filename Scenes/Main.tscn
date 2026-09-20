@@ -15,6 +15,8 @@
 [ext_resource type="Texture2D" uid="uid://b3q4qdtqfurix" path="res://Assets/Platforms/8.png" id="13_3tgeq"]
 [ext_resource type="Texture2D" uid="uid://sno5rlqabdfl" path="res://Assets/Platforms/9.png" id="14_c4ay3"]
 [ext_resource type="Script" uid="uid://bktn3ko6q3ntp" path="res://Scenes/area_2d.gd" id="15_h1m7h"]
+[ext_resource type="Script" uid="uid://bsmft0rcl6e8" path="res://Scenes/area_2d_2.gd" id="16_2w5on"]
+[ext_resource type="Texture2D" uid="uid://b42yju7kn0wff" path="res://icon.svg" id="17_346fj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kln2b"]
 texture = ExtResource("2_idj7w")
@@ -3525,6 +3527,9 @@ sources/13 = SubResource("TileSetAtlasSource_4n42c")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1p5hy"]
 size = Vector2(10662, 36)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0sclb"]
+size = Vector2(123, 125)
+
 [node name="Main" type="Node2D" unique_id=1589788133]
 
 [node name="Player" parent="." unique_id=2006581163 instance=ExtResource("1_r150o")]
@@ -3542,4 +3547,17 @@ script = ExtResource("15_h1m7h")
 position = Vector2(3494, 1231)
 shape = SubResource("RectangleShape2D_1p5hy")
 
+[node name="Area2D2" type="Area2D" parent="." unique_id=1540299491]
+script = ExtResource("16_2w5on")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D2" unique_id=1471339790]
+modulate = Color(0.72414637, 0.9773155, 0, 1)
+position = Vector2(6976, -28)
+texture = ExtResource("17_346fj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D2" unique_id=452527970]
+position = Vector2(6976.5, -28.5)
+shape = SubResource("RectangleShape2D_0sclb")
+
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="Area2D2" to="Area2D2" method="_on_body_entered"]
