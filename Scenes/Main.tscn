@@ -3524,6 +3524,7 @@ sources/13 = SubResource("TileSetAtlasSource_4n42c")
 [node name="Main" type="Node2D" unique_id=1589788133]
 
 [node name="Player" parent="." unique_id=2006581163 instance=ExtResource("1_r150o")]
+position = Vector2(102, 72.00001)
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1115512967]
 position = Vector2(85, -53)
